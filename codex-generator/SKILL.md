@@ -22,6 +22,7 @@ description: "Use when the user wants to generate an Obsidian-format code knowle
 ```
 {项目名}-codex/
 ├── INDEX.md                        # 总概览 + MOC
+├── README.md                       # 项目原始 README 直接复制（保持原文）
 ├── {module-a}/                     # 模块文件夹（cluster 名，kebab-case）
 │   ├── _overview.md                # 模块概览
 │   ├── {sourceFileName}.md         # 文件级文档（含函数、类描述）
@@ -37,6 +38,7 @@ description: "Use when the user wants to generate an Obsidian-format code knowle
 
 ```
 - [ ] READ gitnexus://repo/{name}/context           → 确认索引可用
+- [ ] READ 项目根目录 README.md                      → 复制为 codex/README.md（原文不改动）
 - [ ] READ gitnexus://repo/{name}/clusters           → 获取模块划分
 - [ ] READ gitnexus://repo/{name}/processes           → 获取执行流程
 - [ ] 对每个 cluster 读取成员列表                       → 确定文件归属
@@ -141,6 +143,7 @@ description: "Use when the user wants to generate an Obsidian-format code knowle
 - 结构和描述使用中文
 - 代码名称（函数名、类名、模块名、属性名）保持英文原样
 - 所有英文命名旁边加括号中文注释：`### validateToken（校验令牌）`
+- **模块名同样适用**：INDEX.md 模块表格的显示文本、`_overview.md` 标题，均须带中文，如 `[[auth/_overview|auth（认证）]]`
 
 ### Frontmatter (元数据规范)
 
@@ -188,7 +191,7 @@ generated: {日期}
 ## 模块一览
 | 模块 | 职责 | 关键文件数 |
 |------|------|-----------|
-| [[{module}/_overview\|{module}]] | {职责描述} | {数量} |
+| [[{module}/_overview\|{module}（{中文模块名}）]] | {职责描述} | {数量} |
 
 ## 核心流程
 - [[{module}/_overview#{流程名}|{流程名}]]
